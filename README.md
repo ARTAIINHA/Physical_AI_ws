@@ -8,8 +8,6 @@
 CCTV가 도착 지점 인식 후, 최단 경로 생성 및 제어를 통해 자율 주행 및 주차 시행
 
 ## 사용 기술
-<img width="1260" height="321" alt="image" src="https://github.com/user-attachments/assets/c34d6d9b-b0b4-4f99-9414-c3ef2331917a" />
-
 VISION: DMPR-PS
 - ResNet 기반 AI
 - Gazebo 시뮬레이터 환경에서 직접 데이터 수집 후 데이터셋 생성해 학습(100장 * 5(증강))
