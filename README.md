@@ -17,6 +17,3 @@ VISION: DMPR-PS
 PLANNING: A* 알고리즘
 
 CONTROL: Pure Pursuit
-
-## 발표 자료(자세한 설명)
-[2025-2심화전공탐색.pdf](https://github.com/user-attachments/files/25319801/2025-2.pdf)
