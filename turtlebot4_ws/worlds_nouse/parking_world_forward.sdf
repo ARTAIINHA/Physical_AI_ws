@@ -1,0 +1,184 @@
+<?xml version="1.7"?>
+<sdf version="1.10">
+  <world name="parking_world_forward">
+
+    <light name="sun" type="directional">
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>1 1 1 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <direction>-0.2 -0.3 -1</direction>
+      <cast_shadows>false</cast_shadows>
+    </light>
+
+    <model name="ground">
+      <static>true</static>
+      <pose>0 0 0 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <plane><normal>0 0 1</normal><size>20 20</size></plane>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <plane><normal>0 0 1</normal><size>20 20</size></plane>
+          </geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="wall_north">
+      <static>true</static>
+      <pose>0 9.5 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>20 0.2 1</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>20 0.2 1</size></box></geometry>
+          <material><ambient>1 1 1 1</ambient><diffuse>1 1 1 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="wall_south">
+      <static>true</static>
+      <pose>0 -9.5 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>20 0.2 1</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>20 0.2 1</size></box></geometry>
+          <material><ambient>1 1 1 1</ambient><diffuse>1 1 1 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="wall_west">
+      <static>true</static>
+      <pose>-9.5 0 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>0.2 20 1</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>0.2 20 1</size></box></geometry>
+          <material><ambient>1 1 1 1</ambient><diffuse>1 1 1 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="wall_east">
+      <static>true</static>
+      <pose>9.5 0 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>0.2 20 1</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>0.2 20 1</size></box></geometry>
+          <material><ambient>1 1 1 1</ambient><diffuse>1 1 1 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- 전진주차 슬롯 3개 (위쪽, 북쪽 벽 앞) -->
+    <!-- 각 슬롯 : 세로 노란 라인 2개 (폭 방향 x축 방향으로 떨어진 선) -->
+    <!-- y=7 근처에 배치 (로드는 아래쪽) -->
+
+    <!-- 슬롯 1 : x ~ -4 -->
+    <model name="forward_slot1_left">
+      <static>true</static>
+      <pose>-4.5 7 0.01 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>0.05 3 0.02</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>0.05 3 0.02</size></box></geometry>
+          <material><ambient>1 1 0 1</ambient><diffuse>1 1 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="forward_slot1_right">
+      <static>true</static>
+      <pose>-3.0 7 0.01 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>0.05 3 0.02</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>0.05 3 0.02</size></box></geometry>
+          <material><ambient>1 1 0 1</ambient><diffuse>1 1 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- 슬롯 2 : x ~ 0 -->
+    <model name="forward_slot2_left">
+      <static>true</static>
+      <pose>-0.5 7 0.01 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>0.05 3 0.02</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>0.05 3 0.02</size></box></geometry>
+          <material><ambient>1 1 0 1</ambient><diffuse>1 1 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="forward_slot2_right">
+      <static>true</static>
+      <pose>1.0 7 0.01 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>0.05 3 0.02</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>0.05 3 0.02</size></box></geometry>
+          <material><ambient>1 1 0 1</ambient><diffuse>1 1 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- 슬롯 3 : x ~ +4 -->
+    <model name="forward_slot3_left">
+      <static>true</static>
+      <pose>3.5 7 0.01 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>0.05 3 0.02</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>0.05 3 0.02</size></box></geometry>
+          <material><ambient>1 1 0 1</ambient><diffuse>1 1 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="forward_slot3_right">
+      <static>true</static>
+      <pose>5.0 7 0.01 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>0.05 3 0.02</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>0.05 3 0.02</size></box></geometry>
+          <material><ambient>1 1 0 1</ambient><diffuse>1 1 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+  </world>
+</sdf>
+

@@ -1,0 +1,103 @@
+<?xml version="1.7"?>
+<sdf version="1.10">
+  <world name="parking_world">
+
+    <!-- ☀ 밝은 태양광 -->
+    <light name="sun" type="directional">
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>1 1 1 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <direction>-0.2 -0.3 -1</direction>
+      <cast_shadows>false</cast_shadows>
+    </light>
+
+    <!-- ===== 바닥 (순백색) ===== -->
+    <model name="ground">
+      <static>true</static>
+      <pose>0 0 0 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>20 20</size>
+            </plane>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>20 20</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ===== 벽 4개 (plane 끝쪽로 이동) ===== -->
+
+    <model name="wall_north">
+      <static>true</static>
+      <pose>0 9.5 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>20 0.2 1</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>20 0.2 1</size></box></geometry>
+          <material><ambient>1 1 1 1</ambient><diffuse>1 1 1 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="wall_south">
+      <static>true</static>
+      <pose>0 -9.5 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>20 0.2 1</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>20 0.2 1</size></box></geometry>
+          <material><ambient>1 1 1 1</ambient><diffuse>1 1 1 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="wall_west">
+      <static>true</static>
+      <pose>-9.5 0 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>0.2 20 1</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>0.2 20 1</size></box></geometry>
+          <material><ambient>1 1 1 1</ambient><diffuse>1 1 1 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="wall_east">
+      <static>true</static>
+      <pose>9.5 0 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>0.2 20 1</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>0.2 20 1</size></box></geometry>
+          <material><ambient>1 1 1 1</ambient><diffuse>1 1 1 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+  </world>
+</sdf>
+
