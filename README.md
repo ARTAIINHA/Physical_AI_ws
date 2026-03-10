@@ -32,6 +32,7 @@
 
 ### DMPR-PS 기반 주차 슬롯 검출
 <img width="1474" height="384" alt="image" src="https://github.com/user-attachments/assets/7296389c-b71d-40e5-b960-9da6ff494073" />
+
 - Pre-trained weights 사용 시 시뮬레이터 환경에서 **성능 저하 발생**
 - 직접 데이터셋 생성 후 **Full Fine-tuning** 진행
   - MATLAB으로 데이터 라벨링
@@ -55,6 +56,7 @@
 
 ### A* 알고리즘
 <img width="473" height="475" alt="image" src="https://github.com/user-attachments/assets/d2547fb0-bd3d-4eac-bac9-e12ca1ceb1fb" />
+
 - 시작 지점에서 목표 지점까지의 최적 경로를 탐색하는 **휴리스틱 기반** 경로 탐색 알고리즘
 - `f(n) = g(n) + h(n)` 을 기준으로 탐색
   - `g(n)`: 현재까지 이동한 실제 비용
@@ -63,6 +65,7 @@
 
 ### 경로 생성 프로세스
 <img width="609" height="614" alt="image" src="https://github.com/user-attachments/assets/2b592571-f0d3-407b-83fa-a086391e45c2" />
+
 1. 고정 장애물 2개 + 랜덤 장애물 24개로 맵 생성
 2. 목표 지점 네 모서리 좌표 계산 후 평균 좌표 산출
 3. 시작점 / 장애물 위치 / 도착점 좌표를 바탕으로 A*로 경로 생성
@@ -77,6 +80,7 @@
 
 ### Pure Pursuit 알고리즘
 <img width="465" height="326" alt="image" src="https://github.com/user-attachments/assets/d73d522c-5d35-4155-ac19-9573dcede0b8" />
+
 - 전역 경로를 직관적으로 추종하는 **기하학적 제어 기법**
 - 구조가 단순하고 계산 비용이 낮아 실시간 제어 및 반복 실험에 적합
 - 차량의 운동 방정식과 경로의 지오메트리만을 사용
