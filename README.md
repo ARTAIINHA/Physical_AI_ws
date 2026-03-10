@@ -105,7 +105,7 @@
 
 ---
 
-## 링크
+## 링크(실행 영상 포함)
 
 - [Blog]([https://github.com/MeDeoDuck/Physical_AI_ws](https://blog.naver.com/deoduck92/224211977269))
 
