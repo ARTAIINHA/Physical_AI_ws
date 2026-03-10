@@ -1,6 +1,5 @@
 # CCTV 기반 자율 로봇 경로 탐색 파이프라인
-
-> 재학습 없이 추적 모델에 ReID 기능 추가하기  
+  
 > 실험 기간: 2025.11 ~ 12 (약 3주)
 
 ---
@@ -20,6 +19,7 @@
 ---
 
 ## 시스템 파이프라인
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/64dd47e0-c266-4e98-9ec5-c5cb8e8fb026" />
 
 ```
 [CCTV 인지] → [경로 생성 (A*)] → [로봇 제어 (Pure Pursuit)]
