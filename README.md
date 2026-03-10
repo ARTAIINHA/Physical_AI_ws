@@ -1,4 +1,4 @@
-<img width="465" height="326" alt="image" src="https://github.com/user-attachments/assets/70ae68ea-307e-4a24-9634-b49b6f76e28b" /><img width="609" height="614" alt="image" src="https://github.com/user-attachments/assets/a52e27e4-e604-4f0b-b3a6-8e3b38361450" /># CCTV 기반 자율 로봇 경로 탐색 파이프라인
+# CCTV 기반 자율 로봇 경로 탐색 파이프라인
 
 > 재학습 없이 추적 모델에 ReID 기능 추가하기  
 > 실험 기간: 2025.11 ~ 12 (약 3주)
